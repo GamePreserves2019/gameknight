@@ -13,3 +13,7 @@ config_version=3
 config/name="Master Yeet"
 run/main_scene="res://Level1/Level1.tscn"
 config/icon="res://icon.png"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
