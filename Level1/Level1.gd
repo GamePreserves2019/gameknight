@@ -1,6 +1,6 @@
 extends Node
 
-onready var tie = get_node("Panel/TextInterfaceEngine")
+onready var tie = get_node("CanvasLayer/Panel/TextInterfaceEngine")
 
 func _ready():
 	var slimemaker = load("res://Objects/SlimeMaker/SlimeMaker.tscn")

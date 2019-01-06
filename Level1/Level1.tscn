@@ -6,7 +6,7 @@
 [ext_resource path="res://addons/GodotTIE/text_interface_engine.gd" type="Script" id=4]
 [ext_resource path="res://addons/GodotTIE/GodotTIE_icon.png" type="Texture" id=5]
 
-[node name="Level1" type="Node"]
+[node name="Level1" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -16,7 +16,15 @@ position = Vector2( 208, 163 )
 
 [node name="Alien1" parent="." index="1" instance=ExtResource( 3 )]
 
-[node name="Panel" type="Panel" parent="." index="2"]
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="2"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="Panel" type="Panel" parent="CanvasLayer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -33,7 +41,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 
-[node name="TextInterfaceEngine" type="ReferenceRect" parent="Panel" index="0"]
+[node name="TextInterfaceEngine" type="ReferenceRect" parent="CanvasLayer/Panel" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
