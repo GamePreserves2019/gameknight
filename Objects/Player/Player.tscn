@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Objects/Player/Player.gd" type="Script" id=1]
 
@@ -11,6 +11,11 @@ load_path = "res://.import/Slime.png-511a3647f073a5417b830232c38056b3.stex"
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
+
+[sub_resource type="CircleShape2D" id=4]
+
+custom_solver_bias = 0.0
+radius = 9.73203
 
 [node name="Player" type="Area2D"]
 
@@ -36,8 +41,25 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
+visible = false
 position = Vector2( 0.100007, 3.55 )
 scale = Vector2( 2, 1.5822 )
 shape = SubResource( 3 )
+
+[node name="Proximity" type="Area2D" parent="." index="2"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Proximity" index="0"]
+
+position = Vector2( 0.549988, 6.55 )
+scale = Vector2( 4.59615, 4.59615 )
+shape = SubResource( 4 )
 
 

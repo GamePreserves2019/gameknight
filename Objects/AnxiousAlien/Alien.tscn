@@ -12,7 +12,7 @@ load_path = "res://.import/AnxiousPixel.png-9ac5251ed71c1656a958ad455a092175.ste
 custom_solver_bias = 0.0
 extents = Vector2( 11.375, 10 )
 
-[node name="Alien1" type="Area2D"]
+[node name="Alien1" type="Area2D" index="0"]
 
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )

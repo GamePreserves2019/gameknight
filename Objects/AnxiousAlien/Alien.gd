@@ -11,6 +11,12 @@ func _ready():
 func _process(delta):
 	if overlaps_area(get_node("../Player")):
 		_collide_player()
+	if overlaps_area(get_node("../Player/Proximity")):
+		_proximity_player()
 		
 func _collide_player():
 	print("collision")
+	
+func _proximity_player():
+	print("proximity")
+
