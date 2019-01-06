@@ -10,7 +10,7 @@ extents = Vector2( 16, 16 )
 [sub_resource type="StreamTexture" id=2]
 
 flags = 4
-load_path = "res://.import/Slime.png-b312e9c3f00893baf629940a6de3147c.stex"
+load_path = "res://.import/Slime.png-511a3647f073a5417b830232c38056b3.stex"
 
 [node name="Player" type="Area2D" index="0"]
 

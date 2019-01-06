@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Slime.png-b312e9c3f00893baf629940a6de3147c.stex"
+path="res://.import/TallSlime.png-7b7687136af45695ef3a3d0bc181993b.stex"
 
 [deps]
 
-source_file="res://Slime.png"
-dest_files=[ "res://.import/Slime.png-b312e9c3f00893baf629940a6de3147c.stex" ]
+source_file="res://Images/TallSlime.png"
+dest_files=[ "res://.import/TallSlime.png-7b7687136af45695ef3a3d0bc181993b.stex" ]
 
 [params]
 
