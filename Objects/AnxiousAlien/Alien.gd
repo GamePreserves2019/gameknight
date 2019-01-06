@@ -19,4 +19,6 @@ func _collide_player():
 	
 func _proximity_player():
 	pass
+	
+
 
