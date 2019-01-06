@@ -12,7 +12,7 @@ extents = Vector2( 16, 16 )
 flags = 4
 load_path = "res://.import/Slime.png-511a3647f073a5417b830232c38056b3.stex"
 
-[node name="Player" type="Area2D" index="0"]
+[node name="Player" type="Area2D"]
 
 position = Vector2( 195, 75 )
 input_pickable = true
