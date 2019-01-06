@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/AnxiousPixel.png-9ac5251ed71c1656a958ad455a092175.stex"
+path="res://.import/AnxiousPixel.png-39aff84bfc910473edbdf7b01e4904b4.stex"
 
 [deps]
 
-source_file="res://AnxiousPixel.png"
-dest_files=[ "res://.import/AnxiousPixel.png-9ac5251ed71c1656a958ad455a092175.stex" ]
+source_file="res://Images/AnxiousPixel.png"
+dest_files=[ "res://.import/AnxiousPixel.png-39aff84bfc910473edbdf7b01e4904b4.stex" ]
 
 [params]
 
