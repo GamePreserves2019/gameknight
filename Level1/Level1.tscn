@@ -16,8 +16,6 @@ position = Vector2( 208, 163 )
 
 [node name="Alien1" parent="." index="1" instance=ExtResource( 3 )]
 
-scale = Vector2( 1, 1 )
-
 [node name="Panel" type="Panel" parent="." index="2"]
 
 anchor_left = 0.0

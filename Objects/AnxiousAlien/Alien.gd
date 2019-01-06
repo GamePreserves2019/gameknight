@@ -8,7 +8,15 @@ func _ready():
 	print("I have a hard hat")
 
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func _process(delta):
+	if overlaps_area(get_node("../Player")):
+		_collide_player()
+	if overlaps_area(get_node("../Player/Proximity")):
+		_proximity_player()
+		
+func _collide_player():
+	print("collision")
+	
+func _proximity_player():
+	print("proximity")
+

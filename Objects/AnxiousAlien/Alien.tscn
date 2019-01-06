@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Objects/AnxiousAlien/Alien.gd" type="Script" id=1]
 
@@ -7,10 +7,20 @@
 flags = 4
 load_path = "res://.import/AnxiousPixel.png-9ac5251ed71c1656a958ad455a092175.stex"
 
-[node name="Alien1" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=2]
 
-position = Vector2( 373.356, 301.488 )
-scale = Vector2( 12.6674, 10.4215 )
+custom_solver_bias = 0.0
+extents = Vector2( 11.375, 10 )
+
+[node name="Alien1" type="Area2D" index="0"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
@@ -19,5 +29,11 @@ _sections_unfolded = [ "Transform" ]
 scale = Vector2( 2, 2 )
 texture = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( -0.799987, 0.299989 )
+scale = Vector2( 1.66957, 3.88462 )
+shape = SubResource( 2 )
 
 
