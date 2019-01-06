@@ -5,7 +5,7 @@
 [ext_resource path="res://Level1/PopupDialog.gd" type="Script" id=3]
 [ext_resource path="res://Objects/AnxiousAlien/Alien.tscn" type="PackedScene" id=4]
 
-[node name="Level1" type="Node" index="0"]
+[node name="Level1" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -32,7 +32,6 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 popup_exclusive = false
 script = ExtResource( 3 )
-_sections_unfolded = [ "Pause", "Popup", "Visibility" ]
 
 [node name="button" type="Button" parent="PopupDialog" index="0"]
 
