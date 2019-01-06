@@ -7,7 +7,7 @@
 flags = 4
 load_path = "res://.import/AnxiousPixel.png-9ac5251ed71c1656a958ad455a092175.stex"
 
-[node name="Alien1" type="Node2D" index="0"]
+[node name="Alien1" type="Node2D"]
 
 position = Vector2( 373.356, 301.488 )
 scale = Vector2( 12.6674, 10.4215 )
