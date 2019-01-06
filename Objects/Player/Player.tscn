@@ -2,15 +2,15 @@
 
 [ext_resource path="res://Objects/Player/Player.gd" type="Script" id=1]
 
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 16, 16 )
-
 [sub_resource type="StreamTexture" id=2]
 
 flags = 4
 load_path = "res://.import/Slime.png-511a3647f073a5417b830232c38056b3.stex"
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
 
 [node name="Player" type="Area2D"]
 
@@ -25,12 +25,7 @@ audio_bus_name = "Master"
 script = ExtResource( 1 )
 speed = 500
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
-
-visible = false
-shape = SubResource( 1 )
-
-[node name="Sprite" type="Sprite" parent="." index="1"]
+[node name="Sprite" type="Sprite" parent="." index="0"]
 
 scale = Vector2( 2, 2 )
 texture = SubResource( 2 )
@@ -38,5 +33,11 @@ _sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform" 
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( 0.100007, 3.55 )
+scale = Vector2( 2, 1.5822 )
+shape = SubResource( 3 )
 
 

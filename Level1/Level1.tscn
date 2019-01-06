@@ -60,4 +60,7 @@ align = 1
 
 [node name="Alien1" parent="." index="2" instance=ExtResource( 4 )]
 
+position = Vector2( 440, 155 )
+scale = Vector2( 2, 2 )
+
 

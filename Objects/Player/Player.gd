@@ -8,6 +8,7 @@ func _ready():
 	screensize = get_viewport_rect().size
 
 func _process(delta):
+	
 	var velocity = Vector2()
 	if Input.is_action_pressed("ui_right"):
 		velocity.x += 1
@@ -20,4 +21,6 @@ func _process(delta):
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 	position += velocity * delta
+	
+	
 
