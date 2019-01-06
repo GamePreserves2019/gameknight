@@ -1,15 +1,20 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
-[ext_resource path="res://Sprite.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 16, 16 )
 
-[node name="Player" type="Area2D"]
+[sub_resource type="StreamTexture" id=2]
 
+flags = 4
+load_path = "res://.import/Slime.png-b312e9c3f00893baf629940a6de3147c.stex"
+
+[node name="Player" type="Area2D" index="0"]
+
+position = Vector2( 195, 75 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -22,11 +27,16 @@ speed = 500
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
+visible = false
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
-script = ExtResource( 2 )
-_sections_unfolded = [ "Material" ]
+scale = Vector2( 2, 2 )
+texture = SubResource( 2 )
+_sections_unfolded = [ "Animation", "Material", "Offset", "Region", "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
 
 
