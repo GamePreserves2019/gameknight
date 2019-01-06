@@ -6,7 +6,7 @@ extends Node2D
 
 func _ready():
 	print("I have a hard hat")
-	pass
+	emit_signal("makeDialog", "text1", "text2")
 
 func _process(delta):
 	if overlaps_area(get_node("../Player")):

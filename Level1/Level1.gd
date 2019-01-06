@@ -5,4 +5,4 @@ func _ready():
 	var node = slimemaker.instance()
 	add_child(node)
 	
-	
+
