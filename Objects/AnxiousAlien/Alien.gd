@@ -15,8 +15,8 @@ func _process(delta):
 		_proximity_player()
 		
 func _collide_player():
-	print("collision")
+	pass
 	
 func _proximity_player():
-	print("proximity")
+	pass
 
