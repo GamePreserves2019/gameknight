@@ -5,7 +5,7 @@
 [ext_resource path="res://Objects/AnxiousAlien/Alien.tscn" type="PackedScene" id=3]
 [ext_resource path="res://addons/GodotTIE/text_interface_engine.gd" type="Script" id=4]
 [ext_resource path="res://addons/GodotTIE/GodotTIE_icon.png" type="Texture" id=5]
-[ext_resource path="res://Images/ScrollingTrees/TreeSet.tres" type="TileSet" id=6]
+[ext_resource path="res://Tiles/TreeTiles/TreeSet.tres" type="TileSet" id=6]
 [ext_resource path="res://Level1/TileMap.gd" type="Script" id=7]
 
 [node name="Level1" type="Node" index="0"]
