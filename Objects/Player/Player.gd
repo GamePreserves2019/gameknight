@@ -21,6 +21,7 @@ func _process(delta):
 	pass
 	
 func _physics_process(delta):
+	var old_velocity = velocity
 	var gforce = Vector2(0, GRAVITY)
 	velocity.x = 0
 	if Input.is_action_pressed("ui_right"):

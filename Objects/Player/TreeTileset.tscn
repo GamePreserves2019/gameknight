@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Images/ScrollingTrees/Trees1_0001_Layer-4.png" type="Texture" id=1]
+[ext_resource path="res://Images/ScrollingTrees/Trees1_0002_Layer-3.png" type="Texture" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Tree1" type="Sprite" parent="." index="0"]
+
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Tree2" type="Sprite" parent="." index="1"]
+
+position = Vector2( 400, 0 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+
