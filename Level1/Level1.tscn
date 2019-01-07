@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Level1/Level1.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Objects/AnxiousAlien/Alien.tscn" type="PackedScene" id=3]
-[ext_resource path="res://addons/GodotTIE/text_interface_engine.gd" type="Script" id=4]
-[ext_resource path="res://addons/GodotTIE/GodotTIE_icon.png" type="Texture" id=5]
+[ext_resource path="res://addons/GodotTIE/text_interface_engine.gd" type="Script" id=3]
+[ext_resource path="res://addons/GodotTIE/GodotTIE_icon.png" type="Texture" id=4]
+[ext_resource path="res://Objects/AnxiousAlien/Alien.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Tiles/TreeTiles/TreeSet.tres" type="TileSet" id=6]
 [ext_resource path="res://Level1/TileMap.gd" type="Script" id=7]
+[ext_resource path="res://Tiles/WorldTiles/WorldTiles.tres" type="TileSet" id=8]
 
 [node name="Level1" type="Node" index="0"]
 
@@ -16,13 +17,9 @@ script = ExtResource( 1 )
 
 position = Vector2( 211, 237 )
 
-[node name="Alien1" parent="." index="1" instance=ExtResource( 3 )]
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="1"]
 
-position = Vector2( 316, 300 )
-scale = Vector2( 24.0312, 1 )
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." index="2"]
-
+editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -61,9 +58,9 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-script = ExtResource( 4 )
+script = ExtResource( 3 )
 __meta__ = {
-"_editor_icon": ExtResource( 5 )
+"_editor_icon": ExtResource( 4 )
 }
 SCROLL_ON_MAX_LINES = true
 BREAK_ON_MAX_LINES = true
@@ -75,12 +72,13 @@ PRINT_INPUT = true
 BLINKING_INPUT = true
 INPUT_CHARACTERS_LIMIT = -1
 
-[node name="Alien2" parent="." index="3" instance=ExtResource( 3 )]
+[node name="Alien2" parent="." index="2" instance=ExtResource( 5 )]
 
 position = Vector2( 213, 88 )
 
-[node name="SpookyTrees" type="ParallaxBackground" parent="." index="4"]
+[node name="SpookyTrees" type="ParallaxBackground" parent="." index="3"]
 
+editor/display_folded = true
 layer = -1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -124,5 +122,27 @@ format = 1
 tile_data = PoolIntArray(  )
 script = ExtResource( 7 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="TileMap" type="TileMap" parent="." index="4"]
+
+scale = Vector2( 2, 2 )
+mode = 0
+tile_set = ExtResource( 8 )
+cell_size = Vector2( 20, 20 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65550, 0, 0, 65551, 0, 0, 196621, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 393225, 0, 0, 524280, 0, 0, 524281, 0, 0, 524282, 0, 0, 524283, 0, 0, 524284, 0, 0, 524285, 0, 0, 524286, 0, 0, 524287, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 458768, 0, 0, 458769, 0, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
 
 
