@@ -1,12 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Level1/Level1.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Objects/AnxiousAlien/Alien.tscn" type="PackedScene" id=3]
 [ext_resource path="res://addons/GodotTIE/text_interface_engine.gd" type="Script" id=4]
 [ext_resource path="res://addons/GodotTIE/GodotTIE_icon.png" type="Texture" id=5]
+[ext_resource path="res://Images/ScrollingTrees/TreeSet.tres" type="TileSet" id=6]
 
-[node name="Level1" type="Node"]
+[node name="Level1" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -16,7 +17,8 @@ position = Vector2( 211, 237 )
 
 [node name="Alien1" parent="." index="1" instance=ExtResource( 3 )]
 
-position = Vector2( 212, 300 )
+position = Vector2( 316, 300 )
+scale = Vector2( 24.0312, 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="2"]
 
@@ -28,6 +30,7 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
 [node name="Panel" type="Panel" parent="CanvasLayer" index="0"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -74,5 +77,50 @@ INPUT_CHARACTERS_LIMIT = -1
 [node name="Alien2" parent="." index="3" instance=ExtResource( 3 )]
 
 position = Vector2( 213, 88 )
+
+[node name="SpookyTrees" type="ParallaxBackground" parent="." index="4"]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = true
+_sections_unfolded = [ "Scroll" ]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="SpookyTrees" index="0"]
+
+position = Vector2( 161, 37.3002 )
+motion_scale = Vector2( 0.5, 0.5 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="TileMap" type="TileMap" parent="SpookyTrees/ParallaxLayer" index="0"]
+
+scale = Vector2( 4, 4 )
+mode = 0
+tile_set = ExtResource( 6 )
+cell_size = Vector2( 100, 100 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 65533, 0, 0, 65534, 1, 0, 65535, 0, 0, 0, 1, 0, 1, 0, 0, 2, 1, 0, 3, 0, 0, 4, 1, 0, 5, 0, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
 
 

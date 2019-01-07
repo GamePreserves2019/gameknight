@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TallSlime.png-7b7687136af45695ef3a3d0bc181993b.stex"
+path="res://.import/Trees1_0001_Layer-4.png-3f61a458af6f67620a5aca58c0e14c3b.stex"
 
 [deps]
 
-source_file="res://Images/TallSlime.png"
-dest_files=[ "res://.import/TallSlime.png-7b7687136af45695ef3a3d0bc181993b.stex" ]
+source_file="res://Images/ScrollingTrees/Trees1_0001_Layer-4.png"
+dest_files=[ "res://.import/Trees1_0001_Layer-4.png-3f61a458af6f67620a5aca58c0e14c3b.stex" ]
 
 [params]
 
@@ -15,12 +15,12 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=1
 flags/filter=false
-flags/mipmaps=false
+flags/mipmaps=true
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
