@@ -17,18 +17,14 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 radius = 9.73203
 
-[node name="Player" type="Area2D"]
+[node name="Player" type="KinematicBody2D" index="0"]
 
 position = Vector2( 195, 75 )
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
 script = ExtResource( 1 )
-speed = 500
 
 [node name="Sprite" type="Sprite" parent="." index="0"]
 
@@ -48,7 +44,6 @@ shape = SubResource( 2 )
 
 [node name="Proximity" type="Area2D" parent="." index="2"]
 
-editor/display_folded = true
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -59,8 +54,8 @@ audio_bus_name = "Master"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Proximity" index="0"]
 
-position = Vector2( 0.549988, 6.55 )
-scale = Vector2( 4.59615, 4.59615 )
+position = Vector2( -3.15, 2.3 )
+scale = Vector2( 9.52323, 8.52182 )
 shape = SubResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="." index="3"]

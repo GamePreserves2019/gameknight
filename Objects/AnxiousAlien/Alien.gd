@@ -1,4 +1,4 @@
-extends Node2D
+extends KinematicBody2D
 
 # class member variables go here, for example:
 # var a = 2
@@ -9,10 +9,9 @@ func _ready():
 
 
 func _process(delta):
-	if overlaps_area(get_node("../Player")):
-		_collide_player()
-	if overlaps_area(get_node("../Player/Proximity")):
-		_proximity_player()
+	#if overlaps_area(get_node("../Player/Proximity")):
+	#	_proximity_player()
+	pass
 		
 func _collide_player():
 	pass
@@ -20,5 +19,5 @@ func _collide_player():
 func _proximity_player():
 	pass
 	
-
+	
 

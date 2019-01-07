@@ -6,15 +6,17 @@
 [ext_resource path="res://addons/GodotTIE/text_interface_engine.gd" type="Script" id=4]
 [ext_resource path="res://addons/GodotTIE/GodotTIE_icon.png" type="Texture" id=5]
 
-[node name="Level1" type="Node" index="0"]
+[node name="Level1" type="Node"]
 
 script = ExtResource( 1 )
 
 [node name="Player" parent="." index="0" instance=ExtResource( 2 )]
 
-position = Vector2( 208, 163 )
+position = Vector2( 211, 237 )
 
 [node name="Alien1" parent="." index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 212, 300 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="2"]
 
@@ -68,5 +70,9 @@ FONT = null
 PRINT_INPUT = true
 BLINKING_INPUT = true
 INPUT_CHARACTERS_LIMIT = -1
+
+[node name="Alien2" parent="." index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 213, 88 )
 
 
