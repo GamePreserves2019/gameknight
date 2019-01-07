@@ -4,7 +4,7 @@ var SPEED = 200
 var GRAVITY = 1200
 var MAX_JUMP_TIME = .25
 var COYOTE_TIME = .1
-var JUMP_SPEED = 450
+var JUMP_SPEED = 350
 var HANG_FORCE = 900
 var screensize
 var velocity
